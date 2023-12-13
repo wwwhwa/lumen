@@ -1,0 +1,30 @@
+﻿<Page x:Class="transport.Pages.CreateAcc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:transport.Pages"
+        mc:Ignorable="d"
+        Title="CreateAcc" Height="600" Width="800" Background="White">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="260">
+            <TextBlock Text="surname:"/>
+            <TextBox x:Name="tbxSurname"/>
+            <TextBlock Text="name:"/>
+            <TextBox x:Name="tbxName"/>
+            <TextBlock Text="login:"/>
+            <TextBox x:Name="tbxLogin"/>
+            <TextBlock Text="password:"/>
+            <TextBox x:Name="tbxPassword"/>
+            
+            <StackPanel Orientation="Horizontal" Height="80" HorizontalAlignment="Center" Width="130">
+                <Button x:Name="btnRegister" Content="create account"  Click="btnRegister_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,46 @@
+﻿<Page x:Class="transport.Pages.Log"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:transport.Pages"
+        mc:Ignorable="d"
+        Title="Log" Height="450" Width="800" Background="White">
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Left">
+            <DataGrid HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="dgv"  d:ItemsSource="{d:SampleData ItemCount=5}" Width="475"/>
+        </ScrollViewer>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBox x:Name="tbSearch" TextWrapping="Wrap" Width="147"/>
+            <Button x:Name="btnSearch" Content="search" Width="120" Height="35" Click="btnSearch_Click"/>
+        </StackPanel>
+
+        <StackPanel Name="panel" Margin="496,52,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox x:Name="tbid" TextWrapping="Wrap" Width="120"/>
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="id" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox x:Name="tbflightid" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="flight id" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox x:Name="tbarrival" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="arrial time" VerticalAlignment="Top"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox x:Name="tbdeparture" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="departure time" VerticalAlignment="Top" RenderTransformOrigin="0.568,6.686"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <TextBox x:Name="tbdate" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="date" VerticalAlignment="Top"/>
+            </StackPanel>
+            <Button x:Name="btnSave" Content="save" Click="saveBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
